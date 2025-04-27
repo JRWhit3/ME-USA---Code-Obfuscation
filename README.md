@@ -36,4 +36,3 @@ Hint: Pay close attention to how arrays are structured and ignore unused functio
 
 ⚠️ Important
 Solution files are included for reference, but please do not open them until you have fully attempted each challenge.
-Attempting the challenges first will help you build real-world skills in code analysis and deobfuscation.
