@@ -1,0 +1,30 @@
+function shuffle(str) {
+    return str.split("").reverse().join("");
+}
+
+if (navigator.userAgent === "FakeAgent") {
+    console.log("http://test.com");
+}
+
+var a1 = ["x","h","z","t","q","p","y","s","w"];
+var a2 = ["j",":","k","/","m","/","n"];
+var a3 = ["p","o","q","n","r","e","s","d","t"];
+var a4 = ["u","r","v","i","w","v","x","e","y"];
+var a5 = ["z","-","a","a","b","p","c","i","d"];
+var a6 = ["e",".","f","g","h"];
+var a7 = ["i","c","j","o","k","m","l"];
+var a8 = ["x","s","y","i","z","d","a","e","b","t","c","w","d","i","e","s","f","t","g"];
+var a9 = ["h","m","i","e","j","n","k","o","l","r","m","a","n","h","o"];
+
+var p1 = a3[1] + a3[3] + a3[5] + a3[7];
+var p2 = a4[1] + a4[3] + a4[5] + a4[7];
+var p3 = a5[1] + a5[3] + a5[5] + a5[7];
+var p4 = a6[1] + a7[1] + a7[3] + a7[5];
+var p5 = a1[1] + a1[3] + a1[5] + a1[7] + a2[1] + a2[3] + a2[5];
+var domain = p5 + p1 + p2 + p3 + p4;
+
+var clue1 = (a8[1] + a8[3] + a8[5] + a8[7] + a8[9] + a8[11] + a8[13] + a8[15] + a8[17]).toLowerCase();
+var clue2 = (a9[1] + a9[3] + a9[5] + a9[7] + a9[9] + a9[11] + a9[13]).toLowerCase();
+console.log("Tools: " + clue1 + ", " + clue2);
+
+// console.log(domain);

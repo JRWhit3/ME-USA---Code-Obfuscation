@@ -1,0 +1,23 @@
+# Decoy logic to mislead
+$decoy = "http://example.com"
+if ($env:COMPUTERNAME -eq "FakeHost") { Write-Output $decoy }
+
+# Obfuscated variables
+$v1 = "ht"; $v2 = "tp"; $v3 = "s"; $v4 = ":"; $v5 = "//";
+$v6 = "on"; $v7 = "ed"; $v8 = "ri"; $v9 = "ve"; $v10 = ".";
+$v11 = "co"; $v12 = "m"; $v13 = "/"; $v14 = "cm"; $v15 = "d";
+$v16 = "ka"; $v17 = "rk"; $v18 = "ov";
+
+# Shuffled concatenation for IoC
+$part1 = $v6 + $v7 + $v8 + $v9; # onedrive
+$part2 = $v10 + $v11 + $v12; # .com
+$part3 = $v13 + $v14 + $v15; # /cmd
+$part4 = $v1 + $v2 + $v3 + $v4 + $v5; # https://
+$url = $part4 + $part1 + $part2 + $part3
+
+# Clue construction for karkov
+$clue = ($v16 + $v17 + $v18).ToLower() # karkov
+Write-Output "Tool: $clue"
+
+# IoC output is commented to force manual reconstruction
+# Write-Output $url
